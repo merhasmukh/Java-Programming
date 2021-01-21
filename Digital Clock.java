@@ -39,7 +39,7 @@ class Clock implements Runnable
 			
 		
 		
-class DigitalClk
+class Digital Clock
 {
 	public static void main (String [] args)
 	{
