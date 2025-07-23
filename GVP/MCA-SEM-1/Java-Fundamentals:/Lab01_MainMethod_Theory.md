@@ -6,7 +6,6 @@ By the end of this lab, students will be able to:
 2. Explain each component of the main method signature
 3. Write and execute basic Java programs using the main method
 4. Handle command-line arguments
-5. Compile and run Java programs from command line
 
 ## Theory
 
@@ -47,16 +46,6 @@ Let's break down each component:
 3. The parameter name `args` can be changed, but the type must be `String[]`
 4. The main method is where program execution begins and typically ends
 
-## Program Structure
-```java
-public class ClassName {
-    public static void main(String[] args) {
-        // Program logic goes here
-        System.out.println("Hello, World!");
-    }
-}
-```
-
 ## Command Line Arguments
 - Arguments passed when running the program: `java ClassName arg1 arg2 arg3`
 - Accessed through the `args` array: `args[0]`, `args[1]`, `args[2]`
@@ -76,28 +65,9 @@ public class ArgumentDemo {
 }
 ```
 
-## Common Errors
+## Common Mistakes to Avoid
 1. **Missing public**: `static void main(String[] args)` - Won't be accessible to JVM
 2. **Missing static**: `public void main(String[] args)` - JVM can't call without object
 3. **Wrong return type**: `public static int main(String[] args)` - JVM expects void
 4. **Wrong parameter**: `public static void main(int[] args)` - JVM passes String array
 5. **Case sensitivity**: `public static void Main(String[] args)` - JVM looks for "main"
-
-## Compilation and Execution Process
-1. **Write**: Create `.java` file with same name as public class
-2. **Compile**: `javac ClassName.java` creates `ClassName.class`
-3. **Run**: `java ClassName` executes the program
-4. **With arguments**: `java ClassName arg1 arg2 arg3`
-
-## Best Practices
-1. Keep main method simple - use it to call other methods
-2. Validate command-line arguments before using them
-3. Use meaningful class and file names
-4. Add comments to explain complex logic
-5. Handle exceptions appropriately
-
-## Next Steps
-- Practice writing basic Java programs with main method
-- Experiment with command-line arguments
-- Understand compilation and execution process
-- Learn about basic input/output operations
